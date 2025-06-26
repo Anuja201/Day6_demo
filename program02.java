@@ -1,36 +1,24 @@
-package demo1;
+package demo3;
+class Test {
+//	final int num1 = 10;
+	final int num1;
+	{
+//		num1 = 10;
+	}
 
-import java.util.Scanner;
+	public Test() {
+		num1 = 10;
+	}
+
+}
 
 public class program02 {
 
 	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-		Employee e=null;
-		System.out.println("Press the  1 Employee");
-		System.out.println("Press the  2 Manager");
-		System.out.println("Press the  3 Salesman");
-		System.out.println("Enter the choices:");
-		int choice=sc.nextInt();
-		switch (choice) {
-		case 1: 
-			e=new Employee();
-			break;
-		case 2:
-			e=new Manager();
-			break;
-		case 3:
-			e=new Salesman();
-			break;
-		}
-		e.accept(sc);
-		e.display();
-		
-		if(e instanceof Salesman) {
-			Salesman sm =(Salesman) e; //downcasting
-			sm.calculateCommission();
-		}
-
+	
+		final int num1;
+		num1 = 10;
+//		num1 = 20; NOT OK
 	}
 
 }
