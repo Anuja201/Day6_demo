@@ -1,24 +1,64 @@
-package demo1;
+package demo2;
 
-import java.util.Scanner;
+class Date{
+	int day;
+	int month;
+	int year;
+	
+	public Date() {
+		
+	}
+
+	public Date(int day, int month, int year) {
+		this.day = day;
+		this.month = month;
+		this.year = year;
+	}
+	 
+	public String toString() {
+		return day+"/" +"/"+month+"/"+year;
+	}
+	
+	public boolean equals(Object obj) { //this->d1,obj->d2
+		if(obj == null) 
+			return false;
+		if(this == obj)
+			return true;
+		//d1.day==d2.day || d1.month == d2.month ........
+		if(obj instanceof Date) {
+			Date d2=(Date) obj;
+			if(this.day == d2.day && this.month ==d2.month && this.year == d2.year)
+				return true;
+		}
+		return false;
+	}
+}
 
 public class program01 {
 
 	public static void main(String[] args) {
+		Date d1=new Date(1,1,2001);
+		Date d2=new Date(1,1,2001);
+		System.out.println("d1="+d1);
+		System.out.println("d1="+d2);
+		System.out.println("d1 == d2="+(d1==d2));
+		System.out.println("d2.equals(d1):"+d2.equals(d1));
+		System.out.println("d1.equals(d2):"+d1.equals("rohan"));
 
-			Scanner sc = new Scanner(System.in);
-//			Employee e = new Employee();
-//			Manager m = new Manager();
-//			Salesman s = new Salesman();
-
-			Employee e;
-//			e = new Employee();
-//			e = new Manager(); // upcasting
-			e = new Salesman(); // upcasting
-			// process of storing the object of subclass in the super class reference
-			e.accept(sc);
-			e.display();
+	}
+	public static void main2(String[] args) {
+		Date d1=new Date(1,1,2001);
+		Date d2=d1;
+		System.out.println("d1="+d1);
+		System.out.println("d1="+d2);
+		System.out.println("d1 == d2="+(d1==d2));
+	}
+	public static void main1(String[] args) {
+		Date d1=new Date(1,1,2001);
+		System.out.println(d1.toString());
 		
+		Date d2=new Date(2,2,2002);
+		System.out.println(d2);
 	}
 
 }
