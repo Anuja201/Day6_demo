@@ -1,36 +1,24 @@
-package demo3;
+package demo1;
 
-class Date{
-	int day;int month;
-	int year;
-	
-	public Date() {
-		
-	}
-
-	
-	final public void setDay(int day) {
-		this.day=day;
-	}
-	public int getDay() {
-		return day;
-	}
-	
-}
-	
-	
-//class MyDate extends Date{
-//	@Override
-//	public void setDay(int day) {
-//		this.day=day;
-//	}
-//}
+import java.util.Scanner;
 
 public class program01 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+			Scanner sc = new Scanner(System.in);
+//			Employee e = new Employee();
+//			Manager m = new Manager();
+//			Salesman s = new Salesman();
+
+			Employee e;
+//			e = new Employee();
+//			e = new Manager(); // upcasting
+			e = new Salesman(); // upcasting
+			// process of storing the object of subclass in the super class reference
+			e.accept(sc);
+			e.display();
+		
 	}
 
 }
