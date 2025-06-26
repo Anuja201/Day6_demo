@@ -1,0 +1,23 @@
+package demo4;
+
+import java.util.Scanner;
+
+public class program02 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		Employee[] arr = new Employee[5];
+		arr[0] = new Manager();
+		arr[1] = new Salesman();
+		arr[2] = new Manager();
+		arr[3] = new Manager();
+		arr[4] = new Salesman();
+		for(int i=0;i<arr.length;i++)
+			arr[i].accept(sc);
+		
+	    for(int i=0;i<arr.length;i++) 
+	    	arr[i].display();
+	}
+	
+
+}
